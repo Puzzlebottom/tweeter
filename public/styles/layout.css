@@ -18,11 +18,21 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-family: "Source Sans 3", sans-serif;
   font-size: 24px;
 }
+
+main {
+  flex-flow: row wrap;
+  align-self: center;
+  color: #545149;
+  width: 90%;
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
