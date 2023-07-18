@@ -34,7 +34,6 @@
 }
 
 .tweet header span {
-  display: flex;
   margin-top: 0.5em;
 }
 
@@ -69,10 +68,25 @@
 .tweet footer span.icons {
   display: flex;
   width: 4.5em;
-  font-size: 0.6em;
+  font-size: 0.7em;
   justify-content: space-between;
 }
 
 .tweet footer span.icons i:hover {
   color: goldenrod;
+}
+
+.tweet footer span.icons i.fa-heart+div {
+  display: flex;
+  justify-self: flex-start;
+  align-self: super;
+  font-size: 0.35em;
+  font-weight: 600;
+  margin-top: 0.3em;
+  margin-left: -1.8em
+}
+
+
+.tweet footer span.icons i.fa-heart:hover+div {
+  color: goldenrod
 }
