@@ -10,7 +10,6 @@
   box-shadow: 8px 8px 1px lightsteelblue;
 }
 
-
 .tweet header {
   flex-direction: row;
   justify-content: space-between;
@@ -68,8 +67,9 @@
 .tweet footer span.icons {
   display: flex;
   width: 4.5em;
-  font-size: 0.7em;
   justify-content: space-between;
+  font-size: 0.7em;
+  color: #4056A1
 }
 
 .tweet footer span.icons i:hover {
