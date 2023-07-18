@@ -76,10 +76,7 @@
   color: goldenrod;
 }
 
-.tweet footer span.icons i.fa-heart+div {
-  display: flex;
-  justify-self: flex-start;
-  align-self: super;
+.tweet footer span.icons div {
   font-size: 0.35em;
   font-weight: 600;
   margin-top: 0.3em;
