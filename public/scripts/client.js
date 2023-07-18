@@ -31,6 +31,4 @@ const renderTweets = (tweetsArray) => {
   }
 };
 
-$().ready(() => {
-  $.get('/tweets', renderTweets);
-})();
+$().ready((() => $.get('/tweets', renderTweets))());
