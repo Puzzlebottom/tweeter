@@ -7,6 +7,7 @@
 #tweet-text:focus {
   font-weight: 600;
   font-size: smaller;
+  height: 3em;
   width: 100%;
   background-color: #f4f1ec;
   border: none;
