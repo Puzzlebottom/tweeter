@@ -31,7 +31,6 @@ const createTweetElement = (tweetObject) => {
   </article>`);
 };
 
-
 const data = [
   {
     user: {
