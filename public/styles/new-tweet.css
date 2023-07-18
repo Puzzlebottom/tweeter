@@ -33,3 +33,7 @@
 .counter {
   margin-right: 0.5em;
 }
+
+.counter-negative {
+  color: red
+}
