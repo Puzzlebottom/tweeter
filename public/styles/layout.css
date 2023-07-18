@@ -29,7 +29,6 @@ body {
 main {
   flex-flow: row wrap;
   align-self: center;
-  color: #545149;
   width: 90%;
 }
 
