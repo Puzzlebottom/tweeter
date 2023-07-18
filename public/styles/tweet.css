@@ -83,7 +83,8 @@
   font-size: 0.35em;
   font-weight: 600;
   margin-top: 0.3em;
-  margin-left: -1.8em
+  margin-left: -1.8em;
+  cursor: default;
 }
 
 
