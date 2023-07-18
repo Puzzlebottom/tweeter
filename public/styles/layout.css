@@ -30,6 +30,7 @@ main {
   flex-flow: row wrap;
   align-self: center;
   width: 90%;
+  padding: 1em;
 }
 
 

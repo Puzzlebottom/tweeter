@@ -1,0 +1,81 @@
+.tweet {
+  display: flex;
+  flex-flow: column;
+  border: thick solid #545149;
+  background-color: #f4f1ec;
+  padding: 0.5em;
+}
+
+.tweet:hover {
+  box-shadow: 8px 8px 1px lightsteelblue;
+}
+
+.tweet:hover header address {
+  text-shadow: 0px 0px 1px lightsteelblue;
+}
+
+.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 0.3em;
+  padding-right: 0;
+  background-color: #f4f1ec;
+}
+
+.tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+.tweet header img {
+  height: 2.2em;
+  width: 2.2em;
+  margin-right: 0.8em;
+}
+
+.tweet header span {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.tweet header address {
+  font-style: normal;
+  color: lightsteelblue;
+  padding-right: 1em;
+
+}
+
+.tweet section {
+  display: flex;
+  font-weight: 600;
+  padding: 1.5em 1em 1.5em 1em;
+  border-bottom: thick solid #545149;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.tweet footer time {
+  display: flex;
+  align-self: center;
+  font-size: 0.6em;
+  font-weight: 600;
+}
+
+.tweet footer span.icons {
+  display: flex;
+  width: 4.5em;
+  font-size: 0.6em;
+  justify-content: space-between;
+}
+
+.tweet footer span.icons i:hover {
+  color: goldenrod;
+}
