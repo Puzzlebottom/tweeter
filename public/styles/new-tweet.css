@@ -38,3 +38,17 @@
 .counter-negative {
   color: red
 }
+
+section.error {
+  display: none;
+  width: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  color: red;
+  border: thick solid red;
+  padding: 0.4em 1em 0.4em 1em;
+}
+
+section.error span {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
