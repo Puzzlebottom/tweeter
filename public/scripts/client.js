@@ -78,55 +78,51 @@ const isVisible = ($element) => {
   return $element.css('display') !== 'none';
 };
 
-
 const clearForm = () => {
   $('#tweet-text').val('');
   $('.counter').val(140);
 };
 
+const toggleErrorMessage = (error) => {
+  const message = error[0].innerText;
+  const errorElement = $('section.error');
+
+  if (isVisible(errorElement)) {
+    errorElement.slideUp(150, () => {
+      errorElement.find('span').text(message);
+      errorElement.slideDown(150);
+    });
+  } else {
+    errorElement.find('span').text(message);
+    errorElement.slideDown(150);
+  }
+};
+
+const submitTweet = (form) => {
+  const errorElement = $('section.error');
+
+  if (isVisible(errorElement)) {
+    $('.error').slideUp(150);
+  }
+
+  const text = $(form).serialize();
+  postTweet(text);
+};
+
+
 $().ready(() => {
   loadTweets();
 
-  const formElement = $('.new-tweet').find('form');
-
-  formElement.validate({
-    onfocusout: false,
-    onkeyup: false,
-    onclick: false,
-
+  $('.new-tweet').find('form').validate({
+    onfocusout: false, onkeyup: false, onclick: false,
     rules: { text: { required: true, maxlength: 140 } },
-
     messages: {
       text: {
         required: "You can't tweet an empty tweet, you twit!",
         maxlength: 'This tweet is twoo long!'
       }
     },
-
-    errorPlacement: (error) => {
-      const message = error[0].innerText;
-      const errorElement = $('section.error');
-
-      if (isVisible(errorElement)) {
-        errorElement.slideUp(150, () => {
-          errorElement.find('span').text(message);
-          errorElement.slideDown(150, () => console.log('Down...'));
-        });
-      } else {
-        errorElement.find('span').text(message);
-        errorElement.slideDown(150, () => console.log('Down...'));
-      }
-    },
-
-    submitHandler: (form) => {
-      const errorElement = $('section.error');
-
-      if (isVisible(errorElement)) {
-        $('.error').slideUp(150);
-      }
-
-      const text = $(form).serialize();
-      postTweet(text);
-    }
+    errorPlacement: toggleErrorMessage,
+    submitHandler: submitTweet,
   });
 });
