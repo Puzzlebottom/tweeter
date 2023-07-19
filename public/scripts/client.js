@@ -109,9 +109,18 @@ const submitTweet = (form) => {
   postTweet(text);
 };
 
-
 $().ready(() => {
   loadTweets();
+
+  const showFormButton = $('#show-form-button');
+  const form = $('.new-tweet');
+  showFormButton.on('click', () => {
+    if (isVisible(form)) {
+      return form.slideUp(300);
+    }
+    form.slideDown(300);
+    $('#tweet-text').focus();
+  });
 
   $('.new-tweet').find('form').validate({
     onfocusout: false, onkeyup: false, onclick: false,

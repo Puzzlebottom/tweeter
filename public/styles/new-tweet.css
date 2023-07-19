@@ -31,6 +31,10 @@
   border: none
 }
 
+.new-tweet button:hover {
+  cursor: pointer;
+}
+
 .counter {
   margin-right: 0.5em;
 }
