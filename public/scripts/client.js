@@ -32,40 +32,51 @@ const renderTweets = (tweetsArray) => {
   }
 };
 
-$().ready(() => {
-  $.get('/tweets', renderTweets);
+const loadTweets = () => {
+  $.get('/tweets', (res) => {
+    $('#tweets').empty();
+    renderTweets(res);
+  });
+};
 
-  $('.new-tweet').find('form').validate({
+const clearForm = () => {
+  $('#tweet-text').val('');
+  $('.counter').val(140);
+};
+
+const postTweet = (tweet) => {
+  $.post('/tweets', tweet, () => {
+    clearForm();
+    loadTweets();
+  });
+};
+
+$().ready(() => {
+  loadTweets();
+
+  const formElement = $('.new-tweet').find('form');
+
+  formElement.validate({
     onfocusout: false,
     onkeyup: false,
     onclick: false,
-    rules: {
-      text: {
-        required: true,
-        maxlength: 140
-      }
-    },
+
+    rules: { text: { required: true, maxlength: 140 } },
+
     messages: {
       text: {
         required: "You can't tweet an empty tweet, you twit!",
         maxlength: 'This tweet is twoo long!'
       }
     },
+
     errorPlacement: (error) => {
       alert(error[0].innerText);
     },
+
     submitHandler: (form) => {
-      $.post('/tweets', $(form).serialize(), () => {
-
-        $('#tweet-text').val('');
-        $('.counter').val(140);
-
-        $.get('/tweets', (response) => {
-          $('#tweets').empty();
-          renderTweets(response);
-        });
-      });
-
+      const text = $(form).serialize();
+      postTweet(text);
     }
   });
 });
