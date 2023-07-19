@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const createTweetElement = (tweetObject) => {
   const { name, avatars, handle } = tweetObject.user;
   const { text } = tweetObject.content;
@@ -14,7 +15,7 @@ const createTweetElement = (tweetObject) => {
   ${text}
   </section>
   <footer>
-  <time>${tweetObject.created_at}</time>
+  <time class="timeago" >${timeago.format(tweetObject.created_at)}</time>
   <span class="icons">
   <i class="fa-solid fa-flag"></i>
   <i class="fa-solid fa-retweet"></i>
