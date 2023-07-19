@@ -112,7 +112,7 @@ const submitTweet = (form) => {
 $().ready(() => {
   loadTweets();
 
-  const showFormButton = $('#show-form-button');
+  const showFormButton = $('#show-form');
   const form = $('.new-tweet');
   showFormButton.on('click', () => {
     if (isVisible(form)) {
