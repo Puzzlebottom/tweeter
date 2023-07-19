@@ -27,9 +27,45 @@ const createTweetElement = (tweetObject) => {
 };
 
 const renderTweets = (tweetsArray) => {
-  for (const tweet of tweetsArray) {
+  for (const tweet of tweetsArray.reverse()) {
     $('#tweets').append(createTweetElement(tweet));
   }
 };
 
-$().ready((() => $.get('/tweets', renderTweets))());
+$().ready(() => {
+  $.get('/tweets', renderTweets);
+
+  $('.new-tweet').find('form').validate({
+    onfocusout: false,
+    onkeyup: false,
+    onclick: false,
+    rules: {
+      text: {
+        required: true,
+        maxlength: 140
+      }
+    },
+    messages: {
+      text: {
+        required: "You can't tweet an empty tweet, you twit!",
+        maxlength: 'This tweet is twoo long!'
+      }
+    },
+    errorPlacement: (error) => {
+      alert(error[0].innerText);
+    },
+    submitHandler: (form) => {
+      $.post('/tweets', $(form).serialize(), () => {
+
+        $('#tweet-text').val('');
+        $('.counter').val(140);
+
+        $.get('/tweets', (response) => {
+          $('#tweets').empty();
+          renderTweets(response);
+        });
+      });
+
+    }
+  });
+});
