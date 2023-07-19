@@ -7,12 +7,12 @@ const createTweetElement = (tweetObject) => {
   <header>
   <div>
   <img src=${avatars} />
-  <span>${name}</span>
+  <span>${escapeText(name)}</span>
   </div>
-  <address>${handle}</address>
+  <address>${escapeText(handle)}</address>
   </header>
   <section>
-  ${text}
+  ${escapeText(text)}
   </section>
   <footer>
   <time class="timeago" >${timeago.format(tweetObject.created_at)}</time>
@@ -24,6 +24,13 @@ const createTweetElement = (tweetObject) => {
   </span>
   </footer>
   </article>`);
+};
+
+const escapeText = (string) => {
+  const textNode = document.createTextNode(string);
+  const div = document.createElement('div');
+  div.appendChild(textNode);
+  return div.innerHTML;
 };
 
 const renderTweets = (tweetsArray) => {
