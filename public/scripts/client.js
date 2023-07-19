@@ -3,7 +3,7 @@ const createTweetElement = (tweetObject) => {
   const { name, avatars, handle } = tweetObject.user;
   const { text } = tweetObject.content;
 
-  return $(`<article class="tweet">
+  return `<article class="tweet">
   <header>
   <div>
   <img src=${avatars} />
@@ -23,7 +23,7 @@ const createTweetElement = (tweetObject) => {
   <div>1</div>
   </span>
   </footer>
-  </article>`);
+  </article>`;
 };
 
 const escapeText = (string) => {
@@ -34,9 +34,11 @@ const escapeText = (string) => {
 };
 
 const renderTweets = (tweetsArray) => {
+  let markup = '';
   for (const tweet of tweetsArray.reverse()) {
-    $('#tweets').append(createTweetElement(tweet));
+    markup += createTweetElement(tweet);
   }
+  $('#tweets').append($(markup));
 };
 
 const loadTweets = () => {
