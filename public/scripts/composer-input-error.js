@@ -3,7 +3,7 @@
 
 const toggleErrorMessage = (error) => {
   const message = error[0].innerText;
-  const $alert = $('#alert');
+  const $alert = $('.new-tweet .alert');
 
   if (isVisible($alert)) {
     changeAlert(message); // (function() {writeComment('helpers make things easier to read!')})();

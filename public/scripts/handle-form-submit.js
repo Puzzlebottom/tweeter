@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 
 const handleFormSubmit = ($form) => {
-  const $alert = $('#alert');
+  const $alert = $('.new-tweet .alert');
   const text = $($form).serialize(); // If you tweet first thing in the morning, is this breakfast serial?
 
   if (isVisible($alert)) $alert.slideUp(150); // since this handler can only get called when the input is valid, this hides the alert message

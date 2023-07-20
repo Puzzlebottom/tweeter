@@ -55,6 +55,7 @@
       <i class="fa-sharp fa-solid fa-angles-down"></i>
     </button>
   </nav>
+
   <header>
     <div>
       <img src="/images/profile-hex.png">
@@ -66,12 +67,14 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section id="alert">
-      <i class="fa-solid fa-triangle-exclamation"></i>
-      <span></span>
-      <i class="fa-solid fa-triangle-exclamation"></i>
-    </section>
+
+
     <section class="new-tweet">
+      <article class="alert">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span></span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </article>
       <form action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -81,11 +84,14 @@
         </div>
       </form>
     </section>
+
     <section id="tweets">
     </section>
+
     <button type="button" id="back-to-top">
       <i class="fa-solid fa-angles-up"></i>
     </button>
+
   </main>
 </body>
 

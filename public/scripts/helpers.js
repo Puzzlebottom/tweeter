@@ -10,7 +10,7 @@ const resetForm = () => { // cleans up the tweet submission form after reset
 };
 
 const showAlert = (message) => { // sets the error message of the alert element and then toggles it visible
-  const $alert = $('#alert');
+  const $alert = $('.new-tweet .alert');
   const $text = $alert.find('span');
 
   $text.text(message);
@@ -18,7 +18,7 @@ const showAlert = (message) => { // sets the error message of the alert element 
 };
 
 const changeAlert = (message) => { // if the alert is already active, this hides it then shows it again with a new (or same) message
-  const $alert = $('#alert');
+  const $alert = $('.new-tweet .alert');
 
   $alert.slideUp(150, () => {
     showAlert(message); // reduce reuse recycle
@@ -26,5 +26,5 @@ const changeAlert = (message) => { // if the alert is already active, this hides
 };
 
 const hideAlert = () => {
-  $('#alert').slideUp(150);
+  $('.new-tweet .alert').slideUp(150);
 };

@@ -1,6 +1,25 @@
 .new-tweet {
-  padding: 1.5em 0.5em 2.5em 0.5em;
+  padding: 1.5em 0em 2.5em 0em;
   font-weight: 600;
+}
+
+.new-tweet form {
+  margin: 0em 0.5em 0em 0.5em;
+}
+
+.new-tweet .alert {
+  display: none;
+  width: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  color: red;
+  border: thick solid red;
+  padding: 0.4em 1em 0.4em 1em;
+  margin: -1.5em 0em 1em 0em;
+}
+
+.new-tweet .alert span {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
 }
 
 #tweet-text,
@@ -41,18 +60,4 @@
 
 .counter-negative {
   color: red
-}
-
-#alert {
-  display: none;
-  width: 100%;
-  font-family: "Source Sans 3", sans-serif;
-  color: red;
-  border: thick solid red;
-  padding: 0.4em 1em 0.4em 1em;
-}
-
-#alert span {
-  margin-left: 0.3em;
-  margin-right: 0.3em;
 }

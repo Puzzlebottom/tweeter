@@ -31,6 +31,13 @@ button#show-form:hover {
   background-color: #ffffff16;
 }
 
+i.fa-angles-down {
+  /*double chevron*/
+  color: #FF0000;
+  animation: upDown 2s linear infinite;
+  position: relative;
+}
+
 button#back-to-top {
   display: none;
   position: fixed;
@@ -38,22 +45,20 @@ button#back-to-top {
   bottom: 0.5em;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
   background-color: red;
-  height: 2.5em;
-  width: 2.5em;
+  height: 3.5em;
+  width: 3.5em;
   border: none;
-  font-size: 1.5em;
   border-radius: 50%;
   cursor: pointer;
 }
 
-i.fa-angles-down {
-  /*double chevron*/
-  color: #FF0000;
-  animation: upDown 2s linear infinite;
-  position: relative;
+i.fa-angles-up {
+  color: #FFFFFF;
+  font-size: 1.5em;
 }
+
+/** KEYFRAMES */
 
 @keyframes upDown {
 
