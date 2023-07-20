@@ -30,4 +30,4 @@ const renderTweets = (tweetsArray) => {
   for (const tweet of tweetsArray.reverse()) { // the 'server-side' sort function is implemented wrong. It sorts oldest first.
     tweetContainer.append(createTweetElement(tweet)); // append each tweet
   }
-}; s;
+};
