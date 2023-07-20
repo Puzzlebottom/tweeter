@@ -6,79 +6,58 @@
   padding: 0.5em;
   margin-bottom: 1.5em;
 }
-
-.tweet:hover {
-  box-shadow: 8px 8px 1px lightsteelblue;
-}
-
 .tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: auto;
-  width: auto;
   margin-top: 0;
   padding: 0.3em;
   padding-right: 0;
   background-color: #f4f1ec;
 }
-
 .tweet header div {
   display: flex;
   align-items: center;
 }
-
-.tweet header img {
+.tweet header div img {
   height: 2.2em;
   width: 2.2em;
   margin-right: 0.8em;
 }
-
-.tweet header span {
+.tweet header div span {
   margin-top: 0.5em;
 }
-
 .tweet header address {
   font-style: normal;
   color: lightsteelblue;
   padding-right: 1em;
 }
-
-.tweet:hover header address {
-  text-shadow: 0px 0px 1px lightsteelblue;
-}
-
 .tweet section {
   word-wrap: break-word;
   font-weight: 600;
   padding: 1.5em 1em 1.5em 1em;
   border-bottom: thick solid #545149;
 }
-
 .tweet footer {
   display: flex;
   justify-content: space-between;
   padding: 0.5em 1em 0.5em 1em;
 }
-
 .tweet footer time {
   font-size: 0.6em;
   font-weight: 600;
 }
-
 .tweet footer span.icons {
   display: flex;
   width: 4.5em;
   justify-content: space-between;
   font-size: 0.7em;
-  color: #4056A1
+  color: #4056A1;
 }
-
 .tweet footer span.icons i:hover {
   color: goldenrod;
 }
-
 .tweet footer span.icons div {
   font-size: 0.35em;
   font-weight: 600;
@@ -86,8 +65,13 @@
   margin-left: -1.8em;
   cursor: default;
 }
+.tweet footer span.icons i.fa-heart:hover div {
+  color: goldenrod;
+}
 
-
-.tweet footer span.icons i.fa-heart:hover+div {
-  color: goldenrod
+.tweet:hover {
+  box-shadow: 8px 8px 1px lightsteelblue;
+}
+.tweet:hover header address {
+  text-shadow: 0px 0px 1px lightsteelblue;
 }

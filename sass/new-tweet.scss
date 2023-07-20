@@ -1,0 +1,94 @@
+@use 'base';
+@use 'mixins';
+
+.new-tweet {
+  padding: 1.5em 0em 2.5em 0em;
+  font-weight: 600;
+
+  .alert {
+    display: none;
+    @include mixins.smackDab();
+    width: 100%;
+    font-family: "Source Sans 3", sans-serif;
+    color: base.$text-alert;
+    border: thick solid base.$text-alert;
+    padding: 0.4em 1em 0.4em 1em;
+    margin: -1.5em 0em 1em 0em;
+
+    span {
+      text-align: center;
+      margin-left: 0.3em;
+      margin-right: 0.3em;
+    }
+  }
+
+  form {
+    margin: 0em 0.5em 0em 0.5em;
+
+    #tweet-text,
+    #tweet-text:focus {
+      font-weight: 600;
+      font-size: smaller;
+      height: 4.5em;
+      width: 100%;
+      background-color: base.$background;
+      border: none;
+      border-bottom: thick solid base.$text-dark;
+      margin-bottom: 0.5em;
+      margin-top: 0.2em;
+      resize: none;
+      outline-style: none;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      font-family: base.$font-stack-bungee;
+
+      button {
+        background-color: base.$primary;
+        color: base.$text-light;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        border: none
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
+      .counter {
+        margin-right: 0.5em;
+      }
+
+      .counter-negative {
+        color: base.$text-alert
+      }
+    }
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+  .new-tweet form #tweet-text,
+  .new-tweet form #tweet-text:focus {
+    height: 4em;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    padding-top: 0;
+
+    .alert {
+      padding: 0.4em 0 0.4em 0;
+      margin: 0em 0.3em 1em 0.3em;
+    }
+
+    form #tweet-text,
+    form #tweet-text:focus {
+      height: 5em;
+    }
+  }
+}

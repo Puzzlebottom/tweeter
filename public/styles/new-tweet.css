@@ -2,11 +2,6 @@
   padding: 1.5em 0em 2.5em 0em;
   font-weight: 600;
 }
-
-.new-tweet form {
-  margin: 0em 0.5em 0em 0.5em;
-}
-
 .new-tweet .alert {
   display: none;
   justify-content: center;
@@ -18,18 +13,19 @@
   padding: 0.4em 1em 0.4em 1em;
   margin: -1.5em 0em 1em 0em;
 }
-
 .new-tweet .alert span {
   text-align: center;
   margin-left: 0.3em;
   margin-right: 0.3em;
 }
-
-#tweet-text,
-#tweet-text:focus {
+.new-tweet form {
+  margin: 0em 0.5em 0em 0.5em;
+}
+.new-tweet form #tweet-text,
+.new-tweet form #tweet-text:focus {
   font-weight: 600;
   font-size: smaller;
-  height: 5.5em;
+  height: 4.5em;
   width: 100%;
   background-color: #f4f1ec;
   border: none;
@@ -39,50 +35,45 @@
   resize: none;
   outline-style: none;
 }
-
 .new-tweet form div {
   display: flex;
   justify-content: space-between;
   font-family: Bungee, sans-serif;
 }
-
-.new-tweet button {
+.new-tweet form div button {
   background-color: #4056A1;
-  color: #FFFFFF;
+  color: white;
   padding: 0.2em 0.5em 0.2em 0.5em;
-  border: none
+  border: none;
 }
-
-.new-tweet button:hover {
+.new-tweet form div button:hover {
   cursor: pointer;
 }
-
-.counter {
+.new-tweet form div .counter {
   margin-right: 0.5em;
 }
-
-.counter-negative {
-  color: red
+.new-tweet form div .counter-negative {
+  color: red;
 }
-
 
 /* TABLET */
 @media screen and (min-width: 768px) {
-
-  #tweet-text,
-  #tweet-text:focus {
+  .new-tweet form #tweet-text,
+  .new-tweet form #tweet-text:focus {
     height: 4em;
   }
 }
-
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
   .new-tweet {
     padding-top: 0;
   }
-
   .new-tweet .alert {
     padding: 0.4em 0 0.4em 0;
     margin: 0em 0.3em 1em 0.3em;
+  }
+  .new-tweet form #tweet-text,
+  .new-tweet form #tweet-text:focus {
+    height: 5em;
   }
 }
