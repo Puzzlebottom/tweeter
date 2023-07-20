@@ -33,8 +33,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
+  <script type="text/javascript" src="/scripts/add-event-listeners.js"></script>
+  <script type="text/javascript" src="/scripts/api.js"></script>
+  <script type="text/javascript" src="/scripts/create-tweet-element.js"></script>
+  <script type="text/javascript" src="/scripts/composer-input-error.js"></script>
+  <script type="text/javascript" src="/scripts/handle-form-submit.js"></script>
+  <script type="text/javascript" src="/scripts/helpers.js"></script>
+  <script type="text/javascript" src="/scripts/render-tweets.js"></script>
+  <script type="text/javascript" src="/scripts/validate-input.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -59,7 +66,7 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="error">
+    <section id="alert">
       <i class="fa-solid fa-triangle-exclamation"></i>
       <span></span>
       <i class="fa-solid fa-triangle-exclamation"></i>

@@ -24,6 +24,7 @@ button#show-form {
   background-color: #4056A1;
   border: none;
   padding: 0.5em;
+  cursor: pointer;
 }
 
 button#show-form:hover {
@@ -31,7 +32,7 @@ button#show-form:hover {
 }
 
 button#back-to-top {
-  display: flex;
+  display: none;
   position: fixed;
   right: 0.5em;
   bottom: 0.5em;
@@ -44,6 +45,7 @@ button#back-to-top {
   border: none;
   font-size: 1.5em;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 i.fa-angles-down {
