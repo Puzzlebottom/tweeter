@@ -23,6 +23,7 @@ const addEventListeners = () => {
     const $form = $('.new-tweet'); // tweet composition form
 
     if (isVisible($form)) { // If it's visible...
+      hideAlert(); // don't want that ugly ol' alert hanging around, do we?
       return $form.slideUp(300); // we hide it
     }
 

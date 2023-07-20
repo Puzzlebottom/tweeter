@@ -24,3 +24,7 @@ const changeAlert = (message) => { // if the alert is already active, this hides
     showAlert(message); // reduce reuse recycle
   });
 };
+
+const hideAlert = () => {
+  $('#alert').slideUp(150);
+};
