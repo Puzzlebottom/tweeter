@@ -5,7 +5,7 @@ const handleFormSubmit = ($form) => {
   const $alert = $('.new-tweet .alert');
   const text = $($form).serialize(); // If you tweet first thing in the morning, is this breakfast serial?
 
-  if (isVisible($alert)) $alert.slideUp(150); // since this handler can only get called when the input is valid, this hides the alert message
+  if (isVisible($alert)) hideAlert(); // since this handler can only get called when the input is valid, this hides the alert message
 
   postTweet(text) // ajax POST to db...
     .then(() => {

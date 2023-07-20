@@ -1,14 +1,15 @@
 nav {
   display: flex;
   position: fixed;
-  height: 120px;
+  height: 80px;
   width: 100vw;
-  background-color: #4056A1;
+  min-width: 360px;
+  background-color: none;
   color: #FFFFFF;
-  font-size: 50px;
-  padding: 0 1.5em 0.4em 1.5em;
+  font-size: 1.5em;
+  padding: 0 1em 0 1em;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 nav>span {
@@ -21,7 +22,7 @@ button#show-form {
   align-items: center;
   font-size: 0.5em;
   color: #FFFFFF;
-  background-color: #4056A1;
+  background-color: transparent;
   border: none;
   padding: 0.5em;
   cursor: pointer;
@@ -58,7 +59,7 @@ i.fa-angles-up {
   font-size: 1.5em;
 }
 
-/** KEYFRAMES */
+/* KEYFRAMES */
 
 @keyframes upDown {
 
@@ -69,5 +70,20 @@ i.fa-angles-up {
 
   50% {
     transform: translateY(0.5em);
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+
+  button#show-form {
+    background-color: #4056A1;
+  }
+
+  button#show-form:hover {
+    background-color: #ffffff16;
   }
 }

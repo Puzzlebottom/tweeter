@@ -1,23 +1,44 @@
 /* eslint-disable no-unused-vars */
 
-const isVisible = ($element) => { // I've got a few elements that toggle display="none"
-  return $element.css('display') !== 'none'; // this helps keep my IF statements clean
+/**
+ * I've got a few elements that toggle display="none"
+ * this helps keep my IF statements clean
+*/
+const isVisible = ($element) => {
+  return $element.css('display') !== 'none';
 };
 
-const resetForm = () => { // cleans up the tweet submission form after reset
+
+/**
+ * Cleans up the tweet submission form after reset
+ */
+const resetForm = () => {
   $('#tweet-text').val(''); // textarea
   $('.counter').val(140); // char counter
 };
 
-const showAlert = (message) => { // sets the error message of the alert element and then toggles it visible
+
+/**
+ * Sets the error message of the alert element and then toggles it visible
+ */
+const showAlert = (message) => {
   const $alert = $('.new-tweet .alert');
   const $text = $alert.find('span');
 
   $text.text(message);
-  $alert.slideDown(150);
+  $alert.slideDown({
+    duration: 150,
+    start() {
+      $alert.css('display', 'flex');
+    }
+  });
 };
 
-const changeAlert = (message) => { // if the alert is already active, this hides it then shows it again with a new (or same) message
+
+/**
+ * If the alert is already active, this hides it then shows it again with a new (or same) message
+ */
+const changeAlert = (message) => {
   const $alert = $('.new-tweet .alert');
 
   $alert.slideUp(150, () => {
@@ -25,6 +46,10 @@ const changeAlert = (message) => { // if the alert is already active, this hides
   });
 };
 
+
+/**
+ * I'll give you one guess...
+ */
 const hideAlert = () => {
   $('.new-tweet .alert').slideUp(150);
 };

@@ -20,10 +20,11 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  min-width: 360px;
   color: #545149;
   background-color: #f4f1ec;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 main {
@@ -37,3 +38,22 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+  }
+
+  main {
+    padding-top: 0;
+    margin: 180px 1.5em 0 1.5em;
+  }
+}

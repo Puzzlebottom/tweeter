@@ -9,6 +9,8 @@
 
 .new-tweet .alert {
   display: none;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   font-family: "Source Sans 3", sans-serif;
   color: red;
@@ -18,6 +20,7 @@
 }
 
 .new-tweet .alert span {
+  text-align: center;
   margin-left: 0.3em;
   margin-right: 0.3em;
 }
@@ -26,7 +29,7 @@
 #tweet-text:focus {
   font-weight: 600;
   font-size: smaller;
-  height: 3em;
+  height: 5.5em;
   width: 100%;
   background-color: #f4f1ec;
   border: none;
@@ -60,4 +63,26 @@
 
 .counter-negative {
   color: red
+}
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+  #tweet-text,
+  #tweet-text:focus {
+    height: 4em;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    padding-top: 0;
+  }
+
+  .new-tweet .alert {
+    padding: 0.4em 0 0.4em 0;
+    margin: 0em 0.3em 1em 0.3em;
+  }
 }
