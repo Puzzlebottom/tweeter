@@ -29,7 +29,7 @@ const showAlert = (message) => {
   $alert.slideDown({
     duration: 150,
     start() {
-      $alert.css('display', 'flex');
+      $alert.css('display', 'flex'); // The jQuery slideDown method defaults display to block. This changes that to flex.
     }
   });
 };
