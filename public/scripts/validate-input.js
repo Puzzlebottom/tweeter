@@ -17,7 +17,7 @@ const validateInput = ($form) => {
         maxlength: 'This tweet is twoo long!' // custom spelling
       }
     },
-    errorPlacement: toggleErrorMessage, // errorPlacement is only invoked when there IS a validation error. We've got out custom handler in place.
+    errorPlacement: toggleErrorMessage, // errorPlacement is only invoked when there IS a validation error. We've got our custom handler in place.
     submitHandler: handleFormSubmit, // submitHandler is only invoked when there ISN'T a validation error.  This streamlines our submitHandler quite a bit.
   });
 };
