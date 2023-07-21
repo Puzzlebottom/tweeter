@@ -41,7 +41,7 @@
   }
 
   section {
-    word-break: break-all;
+    overflow-wrap: anywhere;
     font-weight: 600;
     padding: 1.5em 1em 1.5em 1em;
     border-bottom: thick solid base.$text-dark;
