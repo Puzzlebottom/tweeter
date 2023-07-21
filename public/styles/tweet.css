@@ -65,7 +65,7 @@
   margin-left: -1.8em;
   cursor: default;
 }
-.tweet footer span.icons i.fa-heart:hover div {
+.tweet footer span.icons i.fa-heart:hover + div {
   color: goldenrod;
 }
 

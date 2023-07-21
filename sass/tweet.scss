@@ -76,7 +76,7 @@
         cursor: default;
       }
 
-      i.fa-heart:hover div {
+      i.fa-heart:hover+div {
         color: base.$secondary
       }
     }
