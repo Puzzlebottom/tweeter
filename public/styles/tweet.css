@@ -34,7 +34,7 @@
   padding-right: 1em;
 }
 .tweet section {
-  word-wrap: break-word;
+  word-break: break-all;
   font-weight: 600;
   padding: 1.5em 1em 1.5em 1em;
   border-bottom: thick solid #545149;
